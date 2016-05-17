@@ -29,15 +29,6 @@
 //      };
 //  };
 
-// document.addEventListener('DOMContentLoaded',function(event){
-    
-//     document.body.style.backgroundColor = 'lightgreen';
-//     updateOrientation();
-    
-// });
-
-
-
 var landscape_color = document.body.style.backgroundColor = 'yellow';
 var portrait_color = document.body.style.backgroundColor = 'green';
 
@@ -63,5 +54,16 @@ var Orientation = {
     }
 };
 
-Orientation.detectOrientation();
-window.addEventListener("orientationchange", Orientation.detectOrientation);
+document.addEventListener('DOMContentLoaded',function(event){
+    
+    document.body.style.backgroundColor = 'lightgreen';
+    //updateOrientation();
+    
+    Orientation.detectOrientation();
+    window.addEventListener("orientationchange", Orientation.detectOrientation);
+
+});
+
+
+
+
