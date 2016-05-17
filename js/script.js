@@ -4,7 +4,8 @@ var iphone_regex = /((?:AppleWebKit+))/gi;
 
 var updateOrientation = function(){
 
-    if(iphone_regex.test(user_agent) === 'AppleWebKit'){
+    if(user_agent.match(iphone_regex)){
+        
          window.addEventListener("orientationchange", function() {
             switch(window.orientation){
                 case 0:
