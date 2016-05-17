@@ -1,6 +1,6 @@
 var user_agent = navigator.userAgent;
 
-var iphone_regex = /((?:AppleWebKit+))/gi;
+var iphone_regex = /(^Mozilla+)/gi;
 
 var updateOrientation = function(){
 
@@ -13,7 +13,7 @@ var updateOrientation = function(){
                 break;
     
                 case -90:
-                    document.body.sytle.backgroundColor = 'green';
+                    document.body.sytle.backgroundColor = 'blue';
                 break;
     
                 case 90:
