@@ -4,7 +4,7 @@ var iphone_regex = /(^Mozilla+)/gi;
 
 var updateOrientation = function(){
 
-    if(user_agent.match(iphone_regex)){
+    if(user_agent == iphone_regex){
         
          window.addEventListener("orientationchange", function() {
             switch(window.orientation){
