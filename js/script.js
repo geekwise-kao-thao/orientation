@@ -4,7 +4,7 @@ var iphone_regex = /((?:AppleWebKit+))/gi;
 
 var updateOrientation = function(){
 
-    if(iphone_regex.test(user_agent)){
+    if(iphone_regex.test(user_agent) === 'AppleWebKit'){
          window.addEventListener("orientationchange", function() {
             switch(window.orientation){
                 case 0:
@@ -29,6 +29,7 @@ var updateOrientation = function(){
 
 document.addEventListener('DOMContentLoaded',function(event){
     
+    document.body.style.backgroundColor = 'lightgreen';
     updateOrientation();
     
 });
