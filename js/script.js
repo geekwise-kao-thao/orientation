@@ -11,7 +11,12 @@ function readDeviceOrientation() {
     if (Math.abs(window.orientation) === 90) {
         // Landscape
         document.body.style.backgroundColor = 'yellow';
-    } else {
+    } 
+    else if(Math.abs(window.orientation) === -90){
+        document.body.style.backgroundColor = 'blue';
+    }
+    
+    else {
     	// Portrait
     	document.body.style.backgroundColor = 'green';
     }
