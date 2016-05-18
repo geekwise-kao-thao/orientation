@@ -24,7 +24,8 @@ var isPortrait = function() {
 }
 
 var isLandscape = function() {
-    return (window.orientation === 90 || window.orientation === -90);
+    //return (window.orientation === 90 || window.orientation === -90);
+    return window.innerHeight < window.innerWidth;
 }
 if (isPortrait()) {
     document.body.style.backgroundColor = 'red';
