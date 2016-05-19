@@ -27,7 +27,12 @@ document.addEventListener('DOMContentLoaded',function(event){
     window.addEventListener('orientationchange',function(){
         if(Math.abs(window.orientation) === 90){
             document.body.style.backgroundColor = 'red';
-        }else{
+        }else if(Math.abs(window.orientation) === (-90)){
+            document.body.style.backgroundColor = 'yellow';
+        }else if(Math.abs(window.orientation) === (180)){
+            document.body.style.backgroundColor = 'green';
+        }
+        else{
             document.body.style.backgroundColor = 'blue';
         }
         
