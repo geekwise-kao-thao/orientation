@@ -6,23 +6,32 @@
 
 document.addEventListener('DOMContentLoaded',function(event){
     
-function readDeviceOrientation() {
+// function readDeviceOrientation() {
                  		
-    if (Math.abs(window.orientation) === 90) {
-        // Landscape
-        document.body.style.backgroundColor = 'yellow';
-    } 
-    else if(Math.abs(window.orientation) === -90){
-        document.body.style.backgroundColor = 'blue';
-    }
+//     if (Math.abs(window.orientation) === 90) {
+//         // Landscape
+//         document.body.style.backgroundColor = 'yellow';
+//     } 
+//     else if(Math.abs(window.orientation) === -90){
+//         document.body.style.backgroundColor = 'blue';
+//     }
     
-    else {
-    	// Portrait
-    	document.body.style.backgroundColor = 'green';
-    }
-}
+//     else {
+//     	// Portrait
+//     	document.body.style.backgroundColor = 'green';
+//     }
+// }
 
-window.onorientationchange = readDeviceOrientation;
+// window.onorientationchange = readDeviceOrientation;
+
+    window.addEventListener('orientationchange',function(){
+        if(Math.abs(window.orientation) === 90){
+            document.body.style.backgroundColor = 'red';
+        }else{
+            document.body.style.backgroundColor = 'blue';
+        }
+        
+    },false);
     
     
 });
